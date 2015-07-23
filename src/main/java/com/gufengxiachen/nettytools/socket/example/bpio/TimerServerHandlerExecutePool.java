@@ -1,4 +1,4 @@
-package com.gufengxiachen.bpio;
+package com.gufengxiachen.nettytools.socket.example.bpio;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ExecutorService;

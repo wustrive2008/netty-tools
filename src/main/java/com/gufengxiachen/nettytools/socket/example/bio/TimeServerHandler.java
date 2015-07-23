@@ -1,4 +1,4 @@
-package com.gufengxiachen.bio;
+package com.gufengxiachen.nettytools.socket.example.bio;
 
 import java.io.BufferedReader;
 import java.io.IOException;

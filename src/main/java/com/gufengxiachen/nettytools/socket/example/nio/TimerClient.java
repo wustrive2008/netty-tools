@@ -1,6 +1,6 @@
-package com.gufengxiachen.aio;
+package com.gufengxiachen.nettytools.socket.example.nio;
 
-public class TimerServer {
+public class TimerClient {
 	public static void main(String[] args) {
 		int port = 8080;
 		if (args != null && args.length > 0){
@@ -10,7 +10,48 @@ public class TimerServer {
 				e.printStackTrace();
 			}
 		}
-		AsyncTimeServerHandler timeServer = new AsyncTimeServerHandler(port);
-		new Thread(timeServer,"AIO-AsyncTimeServerHandler-001").start();
+		
+		new Thread(new TimeClientHandle("127.0.0.1",port),"TimeClient-001").start();
 	}
-}
+	
+	
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

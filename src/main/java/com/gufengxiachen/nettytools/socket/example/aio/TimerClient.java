@@ -1,4 +1,4 @@
-package com.gufengxiachen.nio;
+package com.gufengxiachen.nettytools.socket.example.aio;
 
 public class TimerClient {
 	public static void main(String[] args) {
@@ -10,14 +10,9 @@ public class TimerClient {
 				e.printStackTrace();
 			}
 		}
-		
-		new Thread(new TimeClientHandle("127.0.0.1",port),"TimeClient-001").start();
+		new Thread(new AsyncTimeClientHandler("127.0.0.1", port),"AIO-AsyncTimeClientHandler-001").start();
 	}
-	
-	
-}	
-
-
+}
 
 
 

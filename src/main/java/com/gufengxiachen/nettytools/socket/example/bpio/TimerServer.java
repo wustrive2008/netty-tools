@@ -1,8 +1,10 @@
-package com.gufengxiachen.bio;
+package com.gufengxiachen.nettytools.socket.example.bpio;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+
+import com.gufengxiachen.nettytools.socket.example.bio.TimeServerHandler;
 
 public class TimerServer {
 	public static void main(String[] args) throws IOException {
@@ -16,13 +18,15 @@ public class TimerServer {
 		}
 		
 		ServerSocket server = null;
+		TimerServerHandlerExecutePool singleExecutor = new TimerServerHandlerExecutePool(
+				50,10000);
 		try{
 			server = new ServerSocket(port);
 			System.out.println("the TimeServer is start in port:"+port);
 			Socket socket = null;
 			while(true){
 				socket = server.accept();
-				new Thread(new TimeServerHandler(socket)).start();
+				singleExecutor.execute(new TimeServerHandler(socket));
 			}
 		}finally{
 			if (server != null){
@@ -32,5 +36,4 @@ public class TimerServer {
 			}
 		}
 	}
-	
 }

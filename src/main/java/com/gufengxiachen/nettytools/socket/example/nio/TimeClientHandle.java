@@ -1,4 +1,4 @@
-package com.gufengxiachen.nio;
+package com.gufengxiachen.nettytools.socket.example.nio;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
