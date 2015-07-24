@@ -8,8 +8,6 @@ import java.nio.channels.AsynchronousSocketChannel;
 import java.nio.channels.CompletionHandler;
 import java.util.concurrent.CountDownLatch;
 
-import jdk.management.resource.internal.CompletionHandlerWrapper;
-
 public class AsyncTimeClientHandler implements 
 CompletionHandler<Void, AsyncTimeClientHandler>, Runnable{
 	

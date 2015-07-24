@@ -1,4 +1,4 @@
-package com.gufengxiachen.nettytools.nio.example;
+package com.gufengxiachen.nettytools.nio.example.countdownlatch;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
