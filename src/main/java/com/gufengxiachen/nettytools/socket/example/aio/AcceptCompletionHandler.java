@@ -1,7 +1,6 @@
 package com.gufengxiachen.nettytools.socket.example.aio;
 
 import java.nio.ByteBuffer;
-import java.nio.channels.AsynchronousServerSocketChannel;
 import java.nio.channels.AsynchronousSocketChannel;
 import java.nio.channels.CompletionHandler;
 
